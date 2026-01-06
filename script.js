@@ -2,11 +2,18 @@ const btn = document.querySelector('#btn'); ///DOM
 const input = document.querySelector('#guess'); ///DOM
 const anwswer = Math.floor(Math.random() * 20) + 1; //Data
 
+
+input.addEventListener('keydown', function(e) {
+    if (e.keyCode === 13) {
+        play()
+    }
+})
+
 btn.addEventListener('click', play);           ///Handler
 
-function play() {                                /// Logic+DOM
 
-    const userNumber = document.querySelector('#guess').value;
+function play() {                                /// Logic+DOM
+    const userNumber = Number(input.value);
     if (userNumber < 1 || userNumber > 20) {
         Swal.fire({
         icon: "error",
@@ -48,6 +55,9 @@ function play() {                                /// Logic+DOM
 });
         }
     }
+    input.value = ''; 
+    input.focus();
 }
+
 
 console.log(anwswer);
