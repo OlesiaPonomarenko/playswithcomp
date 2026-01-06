@@ -4,7 +4,7 @@ const anwswer = Math.floor(Math.random() * 20) + 1;
 
 btn.addEventListener('click', play);           ///Handler
 
-function play() {
+function play() {                                /// Logic
 
     const userNumber = document.querySelector('#guess').value;
     if (userNumber < 1 || userNumber > 20) {
