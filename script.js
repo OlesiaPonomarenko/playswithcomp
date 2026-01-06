@@ -1,10 +1,10 @@
-const btn = document.querySelector('#btn'); ///Render
-const input = document.querySelector('#guess'); ///Render
-const anwswer = Math.floor(Math.random() * 20) + 1;
+const btn = document.querySelector('#btn'); ///DOM
+const input = document.querySelector('#guess'); ///DOM
+const anwswer = Math.floor(Math.random() * 20) + 1; //Data
 
 btn.addEventListener('click', play);           ///Handler
 
-function play() {                                /// Logic
+function play() {                                /// Logic+DOM
 
     const userNumber = document.querySelector('#guess').value;
     if (userNumber < 1 || userNumber > 20) {
