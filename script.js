@@ -4,7 +4,7 @@ const anwswer = Math.floor(Math.random() * 20) + 1; //Data
 
 
 input.addEventListener('keydown', function(e) {
-    if (e.keyCode === 13) {
+    if (e.key ===  "Enter") {
         play()
     }
 })
@@ -60,4 +60,12 @@ function play() {                                /// Logic+DOM
 }
 
 
-console.log(anwswer);
+
+
+
+
+
+
+
+     
+
